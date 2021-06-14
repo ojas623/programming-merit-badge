@@ -55,3 +55,11 @@ enterButton.addEventListener("click",addListAfterClick);
 
 // TODO: Add Event Listener to create a TODO on 'Enter' Key
 
+function addListAfterKeypress(event) {
+	if (inputLength() > 0 && event.which ===13) { //this now looks to see if you hit "enter"/"return"
+		//the 13 is the enter key's keycode, this could also be display by event.keyCode === 13
+		createListElement();
+	} 
+}
+
+input.addEventListener("keypress", addListAfterKeypress);
