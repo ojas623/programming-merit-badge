@@ -1,6 +1,8 @@
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
+import java.lang.Math;
+
 class Main extends JFrame implements ActionListener {
     // create a frame
     static JFrame f;
@@ -155,6 +157,8 @@ class Main extends JFrame implements ActionListener {
                 te = (Double.parseDouble(s0) - Double.parseDouble(s2));
             else if (s1.equals("/"))
                 te = (Double.parseDouble(s0) / Double.parseDouble(s2));
+            else if (s1.equals("^"))
+                te = (Math.pow(Double.parseDouble(s0), Double.parseDouble(s2)));
       
             else
                 te = (Double.parseDouble(s0) * Double.parseDouble(s2));
@@ -181,6 +185,8 @@ class Main extends JFrame implements ActionListener {
                 else if (s1.equals("-"))
                     te = (Double.parseDouble(s0) - Double.parseDouble(s2));
                 else if (s1.equals("/"))
+                    te = (Double.parseDouble(s0) / Double.parseDouble(s2));
+                else if (s1.equals("^"))
                     te = (Double.parseDouble(s0) / Double.parseDouble(s2));
                 else
                     te = (Double.parseDouble(s0) * Double.parseDouble(s2));
